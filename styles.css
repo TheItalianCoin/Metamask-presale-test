@@ -1,6 +1,6 @@
 body {
     font-family: "Calibri", sans-serif;
-    font-size: 48px;
+    font-size: 42px;
     background-image: url('img/italian_flag_background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #696969;
+    background-color: #008C45;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -45,7 +45,7 @@ section {
 }
 
 section:nth-child(even) {
-    background-color: #e9ecef;
+    background-color: #CD212A;
 }
 
 footer {
