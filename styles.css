@@ -1,7 +1,9 @@
 body {
     font-family: "Calibri", sans-serif;
     font-size: 48px;
-    background-color: #f8f9fa;
+    background-image: url('img/italian_flag_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #333;
     margin: 0;
     padding: 0;
