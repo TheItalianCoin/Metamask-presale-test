@@ -1,5 +1,5 @@
 body {
-    font-family: "8-bit Arcade", sans-serif;
+    font-family: "Calibri", sans-serif;
     font-size: 48px;
     background-color: #f8f9fa;
     color: #333;
@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #28a745;
+    background-color: #696969;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -47,7 +47,7 @@ section:nth-child(even) {
 }
 
 footer {
-    background-color: #343a40;
+    background-color: #696969;
     color: white;
     text-align: center;
     padding: 1rem 0;
