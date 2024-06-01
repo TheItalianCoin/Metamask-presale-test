@@ -45,12 +45,31 @@ nav ul {
 
 nav ul li {
     margin: 0 1rem;
+    position: relative; /* Aggiunto il posizionamento relativo per l'elemento del menu di navigazione */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    display: block; /* Aggiunto per far sì che il link abbia altezza e larghezza */
+}
+
+nav ul li span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Aggiunto uno sfondo traslucido */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav ul li img {
+    display: block;
+    margin: 0 auto;
 }
 
 section {
