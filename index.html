@@ -19,7 +19,8 @@
         <section id="gaspare">
             <h1>The Italian Coin</h1>
             <p>Symbol: $TIC</p>
-            <p>Contract:0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff</p>
+            <p id="contractAddress">Contract:0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff</p>
+            <button onclick="addBlastNetwork()">Aggiungi rete Blast a MetaMask</button>
         </section>
     </header>
     <nav>
@@ -34,7 +35,7 @@
                     <img src="img presale/Cash.png" alt="How to Buy">
                 </a>
             </li>
-               <li>
+            <li>
                 <a href="#roadmap">
                     <img src="img presale/Vespa.png" alt="Roadmap">
                 </a>
@@ -44,7 +45,6 @@
                     <img src="img presale/Colosseo.png" alt="Tokenomics">
                 </a>
             </li>
-            
             <li>
                 <a href="https://x.com/TheItalianCoin" target="_blank">
                     <img src="img presale/logotwitter.png" alt="Twitter">
@@ -94,26 +94,27 @@
         <p>&copy; 2024 The Italian Coin. All rights reserved.</p>
     </footer>
     <script>
-        // Funzione per ottenere il saldo di ETH sulla rete Blast
-        async function getEthBalance(walletAddress) {
-            const apiUrl = `https://api.blastscan.io/api?module=account&action=balance&address=${walletAddress}&tag=latest&apikey=YR3CQZ58AX7U91CPZUBXDGCRVWAEG3NXJV`;
-
+        async function addBlastNetwork() {
             try {
-                const response = await fetch(apiUrl);
-                const data = await response.json();
-
-                // Assumendo che l'API restituisca il saldo in Wei
-                const balanceInEther = parseFloat(data.result) / 1e18;
-                document.getElementById('ethBalance').innerText = `Saldo ETH sulla rete Blast: ${balanceInEther} ETH`;
+                await window.ethereum.request({
+                    method: 'wallet_addEthereumChain',
+                    params: [{
+                        chainId: '0x13f7', // 81457 in esadecimale
+                        chainName: 'Blast',
+                        nativeCurrency: {
+                            name: 'ETH',
+                            symbol: 'ETH',
+                            decimals: 18
+                        },
+                        rpcUrls: ['https://rpc.blast.io'],
+                        blockExplorerUrls: ['https://blastscan.io']
+                    }]
+                });
+                console.log('Rete Blast aggiunta con successo a MetaMask.');
             } catch (error) {
-                console.error('Errore durante il recupero del saldo di ETH:', error);
-                document.getElementById('ethBalance').innerText = 'Errore nel caricamento del saldo';
+                console.error('Errore durante l\'aggiunta della rete Blast:', error);
             }
         }
-
-        // Chiama la funzione per ottenere il saldo di ETH sulla rete Blast
-        const walletAddress = '0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb'; // Il tuo indirizzo del portafoglio Ethereum sulla rete Blast
-        getEthBalance(walletAddress);
     </script>
 </body>
 </html>
