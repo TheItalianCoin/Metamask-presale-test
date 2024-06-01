@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to The Italian Coin - $TIC">
+    <meta name="theme-color" content="#008C45">
     <title>Welcome to The Italian Coin - $TIC</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,21 +12,61 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: 'Press Start 2P', system-ui;
+            font-family: 'Press Start 2P', sans-serif;
+            font-size: 32px;
+            background-image: url('img presale/TicGIF');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
-        .white-text {
-            color: white;
+        /* Aggiunta regola per il menu di navigazione mobile */
+        .mobile-nav-toggle {
+            display: none;
+        }
+        /* Regole per il menu di navigazione mobile */
+        @media (max-width: 768px) {
+            .mobile-nav-toggle {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 10px;
+                cursor: pointer;
+                z-index: 9999;
+            }
+            nav ul {
+                display: none;
+                background-color: #343a40;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                padding: 0.5rem;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            nav ul li a {
+                color: white;
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+                font-weight: bold;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <section id="gaspare" style="text-align: center;">
-            <img src="img presale/TIC.png" alt="Image for Roadmap section">
-            <p>Symbol: $TIC</p>
-            <p>Contract:0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff</p>
-        </section>
+        <img src="img presale/TIC.png" alt="Image for Roadmap section">
+        <p>Symbol: $TIC</p>
+        <p>Contract: 0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff</p>
     </header>
+    <!-- Aggiunta dell'icona del menu di navigazione mobile -->
+    <div class="mobile-nav-toggle">&#9776;</div>
     <nav>
         <ul>
             <li>
@@ -37,7 +79,7 @@
                     <img src="img presale/Cash.png" alt="How to Buy">
                 </a>
             </li>
-               <li>
+            <li>
                 <a href="#roadmap">
                     <img src="img presale/Vespa.png" alt="Roadmap">
                 </a>
@@ -47,7 +89,6 @@
                     <img src="img presale/Colosseo.png" alt="Tokenomics">
                 </a>
             </li>
-            
             <li>
                 <a href="https://x.com/TheItalianCoin" target="_blank">
                     <img src="img presale/logotwitter.png" alt="Twitter">
@@ -55,37 +96,37 @@
             </li>
         </ul>
     </nav>
+    <!-- Rimossa l'etichetta section id="gaspare" -->
     <section id="about">
-    <div class="about-content">
-        <img src="img presale/clip.gif" alt="Image for Home section">
-        <div class="text-content">
-            <p>$TIC is a meme coin with no intrinsic value or expectation of financial return.</p>
-            <p>The sole aim of the $TIC token is to win the Blast jackpot!</p>
-            <p> It is born out of the Blast Culture</p>
-            <p>20% distributed via an Airdrop to numerous blast communities</p>
-            <p id="ethBalance">ETH Raised: Loading...</p> <!-- Placeholder for ETH balance -->
+        <div class="about-content">
+            <img src="img presale/clip.gif" alt="Image for Home section">
+            <div class="text-content">
+                <p>$TIC is a meme coin with no intrinsic value or expectation of financial return.</p>
+                <p>The sole aim of the $TIC token is to win the Blast jackpot!</p>
+                <p>It is born out of the Blast Culture</p>
+                <p>20% distributed via an Airdrop to numerous blast communities</p>
+                <p id="ethBalance">ETH Raised: Loading...</p>
+            </div>
         </div>
-    </div>
-</section>
-<section id="how-to-buy">
-    <h2>How to Buy</h2>
-    <div class="how-to-buy-content">
-        <img src="img presale/Cash.png" alt="Image for How to Buy section">
-        <div class="text-content">
-            <p><span class="white-text">Presale is open until 07/06/2024.</span></p>
-            <p><span class="white-text">Price: 0.00025 $USD</span></p>
-            <p><span class="white-text">You can send ETH to:</span></p>
-            <p><span class="white-text">0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb</span></p>
-            <a href="#" onclick="copyToClipboard('0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb')">
-                <img src="img presale/button.png" alt="Copia Indirizzo">
-            </a>
-            <p><span class="white-text">Maximum purchase of 0.5 ETH.</span></p>
-            <p><span class="white-text">Tokens will be sent at the end of the presale and before LP creation.</span></p>
-            <p><span class="white-text">Any wallets that send more than 0.5 ETH will be refunded at the end of the presale.</span></p>
+    </section>
+    <section id="how-to-buy">
+        <h2>How to Buy</h2>
+        <div class="how-to-buy-content">
+            <img src="img presale/Cash.png" alt="Image for How to Buy section">
+            <div class="text-content">
+                <p><span class="white-text">Presale is open until 07/06/2024.</span></p>
+                <p><span class="white-text">Price: 0.00025 $USD</span></p>
+                <p><span class="white-text">You can send ETH to:</span></p>
+                <p><span class="white-text">0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb</span></p>
+                <a href="#" onclick="copyToClipboard('0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb')">
+                    <img src="img presale/button.png" alt="Copia Indirizzo">
+                </a>
+                <p><span class="white-text">Maximum purchase of 0.5 ETH.</span></p>
+                <p><span class="white-text">Tokens will be sent at the end of the presale and before LP creation.</span></p>
+                <p><span class="white-text">Any wallets that send more than 0.5 ETH will be refunded at the end of the presale.</span></p>
+            </div>
         </div>
-    </div>
-</section>
-
+    </section>
     <section id="roadmap">
         <h2>Roadmap</h2>
         <ul>
@@ -146,3 +187,4 @@
     </script>
 </body>
 </html>
+
