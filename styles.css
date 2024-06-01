@@ -1,12 +1,5 @@
-@font-face {
-  font-family: 'Retro';
-  src: url('fonts/Retro.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
-    font-family: 'Retro', sans-serif;
+    font-family: 'Press Start 2P', sans-serif; /* Utilizzando il font di Google */
     font-size: 32px;
     background-image: url('img preasale/flagita.png');
     background-repeat: no-repeat;
@@ -21,13 +14,14 @@ header {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    position: relative; /* Aggiunto il posizionamento relativo per il contenitore dell'immagine */
+    position: relative;
 }
 
 #gaspare img {
-    position: absolute; /* Aggiunto il posizionamento assoluto per l'immagine */
-    top: 10px; /* Regola la distanza dall'alto */
-    left: 10px; /* Regola la distanza dalla sinistra */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 100px; /* Aggiunta per assicurarsi che l'immagine non sia troppo grande su schermi piccoli */
 }
 
 nav {
@@ -41,35 +35,25 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Aggiunto per consentire la flessibilità su schermi piccoli */
 }
 
 nav ul li {
-    margin: 0 1rem;
-    position: relative; /* Aggiunto il posizionamento relativo per l'elemento del menu di navigazione */
+    margin: 0.5rem;
+    position: relative;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    display: block; /* Aggiunto per far sì che il link abbia altezza e larghezza */
-}
-
-nav ul li span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.7); /* Aggiunto uno sfondo traslucido */
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
+    display: block;
 }
 
 nav ul li img {
     display: block;
     margin: 0 auto;
+    max-width: 50px; /* Aggiunto per controllare la dimensione dell'immagine */
 }
 
 section {
@@ -86,4 +70,28 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        padding: 0.5rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    section {
+        padding: 1rem;
+    }
 }
