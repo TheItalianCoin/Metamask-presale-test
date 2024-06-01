@@ -66,6 +66,7 @@
             <p>Price: 0.00025 $USD</p>
             <p>You can send ETH to:</p>
             <p>0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb</p> 
+            <button onclick="copyToClipboard('0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb')">Copia Indirizzo</button>
             <p>Maximum purchase of 0.5 ETH.</p>
             <p>Tokens will be sent at the end of the presale and before LP creation.</p>
             <p>Any wallets that send more than 0.5 ETH will be refunded at the end of the presale.</p>
@@ -97,6 +98,17 @@
         <p>&copy; 2024 The Italian Coin. All rights reserved.</p>
     </footer>
     <script>
+        // Funzione per copiare l'indirizzo nel clipboard
+        function copyToClipboard(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert('Indirizzo copiato negli appunti: ' + text);
+        }
+
         // Funzione per ottenere il saldo di ETH sulla rete Blast
         async function getEthBalance(walletAddress) {
             const apiUrl = `https://api.blastscan.io/api?module=account&action=balance&address=${walletAddress}&tag=latest&apikey=YR3CQZ58AX7U91CPZUBXDGCRVWAEG3NXJV`;
