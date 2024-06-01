@@ -89,6 +89,45 @@ about .content {
 
 #about .image img {
     max-width: 100%; /* Assicura che l'immagine non superi la larghezza del suo contenitore */
+}#about {
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-content {
+    margin-top: 20px;
+}
+
+/* Stili per la sezione "How to Buy" */
+#how-to-buy {
+    text-align: center;
+}
+
+.how-to-buy-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.how-to-buy-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-content {
+    margin-top: 20px;
 }
 
 /* Media Queries for responsive design */
