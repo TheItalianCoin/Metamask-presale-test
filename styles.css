@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'Retro';
+  src: url('Fonte/Onesize-Reverse.ttf.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-    font-family: "Calibri", sans-serif;
+    font-family: 'Retro', sans-serif;
     font-size: 32px;
     background-image: url('img preasale/flagita');
     background-repeat: no-repeat;
