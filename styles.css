@@ -1,0 +1,116 @@
+body {
+    font-family: 'Press Start 2P', sans-serif; /* Utilizzando il font di Google */
+    font-size: 32px;
+    background-image: url('img preasale/TicGIF');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #008C45;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+#gaspare img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    
+}
+
+nav {
+    background-color: #343a40;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Aggiunto per consentire la flessibilità su schermi piccoli */
+}
+
+nav ul li {
+    margin: 0.5rem;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+nav ul li img {
+    display: block;
+    margin: 0 auto;
+    
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+section:nth-child(even) {
+    background-color: #CD212A;
+}
+
+footer {
+    background-color: #008C45;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+about .content {
+    display: flex;
+    align-items: center;
+}
+
+#about .text {
+    width: 50%; /* Imposta la larghezza del testo al 50% */
+    padding: 0 20px; /* Aggiunge spazio intorno al testo */
+    box-sizing: border-box; /* Assicura che il padding non aumenti la larghezza del contenitore */
+}
+
+#about .image {
+    width: 50%; /* Imposta la larghezza dell'immagine al 50% */
+    text-align: center; /* Centra l'immagine all'interno del suo contenitore */
+}
+
+#about .image img {
+    max-width: 100%; /* Assicura che l'immagine non superi la larghezza del suo contenitore */
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        padding: 0.5rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
