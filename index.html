@@ -33,32 +33,39 @@
 
     <section id="how-to-buy">
    <script>
-        // Funzione per ottenere il saldo del portafoglio Ethereum
-        function getWalletBalance(walletAddress) {
-            // URL per l'API di Etherscan
-            const apiUrl = `https://api.etherscan.io/api?module=account&action=balance&address=${walletAddress}&tag=latest&apikey=KWYE8XVPU6G4RM7JJ3VPV14PH3M5EY3AIN`;
-            
-            // Effettua la richiesta all'API
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    // Il saldo restituito dall'API è in Wei
-                    // Converti il saldo da Wei a Ether
-                    const balanceInEther = parseFloat(data.result) / 1e18;
+    // Funzione per ottenere il saldo del portafoglio Ethereum
+    function getWalletBalance(walletAddress, apiKey) {
+        // URL per l'API di Blastscan
+        const apiUrl = `https://blastscan.io/api/balance?address=${walletAddress}&apikey=${apiKey}`;
+        
+        // Effettua la richiesta all'API
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                // Controlla se la risposta è stata ricevuta correttamente
+                if (data.status === "1") {
+                    // Il saldo restituito dall'API è in Ether
+                    const balanceInEther = parseFloat(data.result);
                     // Mostra il saldo sulla pagina
                     const balanceElement = document.createElement('p');
                     balanceElement.innerText = `Saldo: ${balanceInEther} ETH`;
                     document.getElementById('about').appendChild(balanceElement);
-                })
-                .catch(error => {
-                    console.error('Si è verificato un errore durante il recupero del saldo:', error);
-                });
-        }
+                } else {
+                    // Gestione degli errori
+                    console.error('Si è verificato un errore durante il recupero del saldo:', data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Si è verificato un errore durante il recupero del saldo:', error);
+            });
+    }
 
-        // Chiama la funzione per ottenere il saldo del portafoglio Ethereum
-        const walletAddress = '0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb'; // Il tuo indirizzo del portafoglio Ethereum
-        getWalletBalance(walletAddress);
-    </script>
+    // Chiama la funzione per ottenere il saldo del portafoglio Ethereum
+    const walletAddress = '0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb'; // Il tuo indirizzo del portafoglio Ethereum
+    const apiKey = 'YR3CQZ58AX7U91CPZUBXDGCRVWAEG3NXJV'; // La tua chiave API di Blastscan
+    getWalletBalance(walletAddress, apiKey);
+</script>
+
         <h2>How to Buy</h2>
         <ul>
             <img src="img presale/Cash.png" alt="Image for How to Buy section">       
