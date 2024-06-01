@@ -1,7 +1,7 @@
 body {
     font-family: 'Press Start 2P', sans-serif; /* Utilizzando il font di Google */
     font-size: 32px;
-    background-image: url('img preasale/TicGIF');
+    background-image: url('img presale/TicGIF');
     background-repeat: no-repeat;
     background-size: cover;
     color: #333;
@@ -18,10 +18,8 @@ header {
 }
 
 #gaspare img {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    
+    display: block;
+    margin: 0 auto;
 }
 
 nav {
@@ -53,7 +51,6 @@ nav ul li a {
 nav ul li img {
     display: block;
     margin: 0 auto;
-    
 }
 
 section {
@@ -71,7 +68,8 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
-about .content {
+
+.about .content {
     display: flex;
     align-items: center;
 }
