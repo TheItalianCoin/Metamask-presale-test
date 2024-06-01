@@ -11,6 +11,63 @@
     <style>
         body {
             font-family: 'Press Start 2P', system-ui;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a img {
+            width: 30px;
+            height: 30px;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+
+        /* Media Queries for responsive design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            body {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -20,7 +77,7 @@
             <img src="img presale/TicGIF" alt="Pixel art of the Italian flag"> 
             <h1>The Italian Coin</h1>
             <p>Symbol: $TIC</p>
-            <p>Contract:0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff</p>
+            <p>Contract: 0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff</p>
         </section>
     </header>
     <nav>
@@ -35,7 +92,7 @@
                     <img src="img presale/Cash.png" alt="How to Buy">
                 </a>
             </li>
-               <li>
+            <li>
                 <a href="#roadmap">
                     <img src="img presale/Vespa.png" alt="Roadmap">
                 </a>
@@ -45,7 +102,6 @@
                     <img src="img presale/Colosseo.png" alt="Tokenomics">
                 </a>
             </li>
-            
             <li>
                 <a href="https://x.com/TheItalianCoin" target="_blank">
                     <img src="img presale/logotwitter.png" alt="Twitter">
@@ -56,15 +112,15 @@
     <section id="about">
         <img src="img presale/pizzabox2.png" alt="Image for Home section">
         <p>$TIC is a meme coin with no intrinsic value or expectation of financial return.</p>
-        <p>The sole aim of the $TIC token is to win the Blast jackpot! It is born out of the Blast Culture, with 20% of it being distributed via an airdrop to numerous blast communities</p>
+        <p>The sole aim of the $TIC token is to win the Blast jackpot! It is born out of the Blast Culture, with 20% of it being distributed via an airdrop to numerous blast communities.</p>
         <p id="ethBalance">ETH Raised: Loading...</p> <!-- Placeholder for ETH balance -->
     </section>
     <section id="how-to-buy">
         <h2>How to Buy</h2>
         <ul>
-            <img src="img presale/Cash.png" alt="Image for How to Buy section">       
+            <img src="img presale/Cash.png" alt="Image for How to Buy section">
             <li>Presale is open until 07/06/2024.</li>
-            <li>Price: 0.00025 $USD/0,000000066 ETH (3800 $USD)</li>
+            <li>Price: 0.00025 $USD/0.000000066 ETH (3800 $USD)</li>
             <li>You can send ETH to: 0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb (Blast Network).</li>
             <li>Maximum purchase of 0.5 ETH. Tokens will be sent at the end of the presale and before LP creation. Any wallets that send more than 0.5 ETH will be refunded at the end of the presale.</li>
         </ul>
@@ -74,8 +130,8 @@
         <ul>
             <li>May 2024 | Token Creation</li>
             <li>1-7 June | Public Sale</li>
-            <li>June 8   | Adding raised funds to LP!</li>
-            <li>June 9   | Win the Blast Jackpot!</li>
+            <li>June 8 | Adding raised funds to LP!</li>
+            <li>June 9 | Win the Blast Jackpot!</li>
         </ul>
         <img src="img presale/Vespa.png" alt="Image for Roadmap section">
     </section>
