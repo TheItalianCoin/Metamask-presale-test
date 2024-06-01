@@ -10,80 +10,55 @@
     <header>
         <section id="gaspare">
             <img src="img presale/TicGIF" alt="Pixel art of the Italian flag"> 
-            <h1>THE ITALIAN COIN </h1>
-            <p>SYMBOL: $TIC</p>
-            <p>CONTRACT: 0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff</p>
+            <h1>The Italian Coin</h1>
+            <p>Symbol: $TIC</p>
+            <p>Contract:0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff</p>
         </section>
     </header>
     <nav>
-    <ul>
-           <li> <a href="#about"> <img src="img presale/Menu.png" alt="About"></a></li>
-           <li></li> <a href="#how-to-buy"> <img src="img presale/Cash.png" alt="How to Buy"> </a> </li>
-           <li> <a href="#roadmap"> <img src="img presale/Vespa.png" alt="Roadmap"> </a></li>
-           <li> <a href="#tokenomics"> <img src="img presale/Colosseo.png" alt="Tokenomics"> </a></li>
-           <li><a href="https://x.com/TheItalianCoin" target="_blank"> <img src="img presale/logotwitter.png" alt="Twitter"> </a> </li>
-    </ul>
-</nav>
+        <ul>
+            <li>
+                <a href="#about">
+                    <img src="img presale/Menu.png" alt="About">
+                </a>
+            </li>
+            <li>
+                <a href="#how-to-buy">
+                    <img src="img presale/Cash.png" alt="How to Buy">
+                </a>
+            </li>
+            <li>
+                <a href="#tokenomics">
+                    <img src="img presale/Colosseo.png" alt="Tokenomics">
+                </a>
+            </li>
+            <li>
+                <a href="#roadmap">
+                    <img src="img presale/Vespa.png" alt="Roadmap">
+                </a>
+            </li>
+            <li>
+                <a href="https://x.com/TheItalianCoin" target="_blank">
+                    <img src="img presale/logotwitter.png" alt="Twitter">
+                </a>
+            </li>
+        </ul>
+    </nav>
     <section id="about">
-        <img src="img presale/pizzabox2.png" alt="Image for Home section">
+        <img src="img presale/flagita" alt="Image for Home section">
         <p>$TIC is a meme coin with no intrinsic value or expectation of financial return.</p>
-        <p>The sole aim of the $TIC token is to win the Blast jackpot, it's born out of the Blast Culture!</p>
-        <p>20% Will be distributed via an airdrop to numerous blast communities, 100% funds from Presale in LP</p>
+        <p>The sole aim of the $TIC token is to win the Blast jackpot! It is born out of the Blast Culture, with 20% of it being distributed via an airdrop to numerous blast communities</p>
+        <p id="ethBalance">Saldo ETH sulla rete Blast: Caricamento...</p> <!-- Placeholder for ETH balance -->
     </section>
-
     <section id="how-to-buy">
-   <script>
-    // Funzione per ottenere il saldo del portafoglio Ethereum
-    function getWalletBalance(walletAddress, apiKey) {
-        // URL per l'API di Blastscan
-        const apiUrl = `https://blastscan.io/api/balance?address=${walletAddress}&apikey=${apiKey}`;
-        
-        // Effettua la richiesta all'API
-        fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                // Controlla se la risposta è stata ricevuta correttamente
-                if (data.status === "1") {
-                    // Il saldo restituito dall'API è in Ether
-                    const balanceInEther = parseFloat(data.result);
-                    // Mostra il saldo sulla pagina
-                    const balanceElement = document.createElement('p');
-                    balanceElement.innerText = `Saldo: ${balanceInEther} ETH`;
-                    document.getElementById('about').appendChild(balanceElement);
-                } else {
-                    // Gestione degli errori
-                    console.error('Si è verificato un errore durante il recupero del saldo:', data.message);
-                }
-            })
-            .catch(error => {
-                console.error('Si è verificato un errore durante il recupero del saldo:', error);
-            });
-    }
-
-    // Chiama la funzione per ottenere il saldo del portafoglio Ethereum
-    const walletAddress = '0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb'; // Il tuo indirizzo del portafoglio Ethereum
-    const apiKey = 'YR3CQZ58AX7U91CPZUBXDGCRVWAEG3NXJV'; // La tua chiave API di Blastscan
-    getWalletBalance(walletAddress, apiKey);
-</script>
-
         <h2>How to Buy</h2>
         <ul>
             <img src="img presale/Cash.png" alt="Image for How to Buy section">       
-                    <li>Presale is open until 07/06/2024.</li>
-                    <li>Price: 0.00025 $USD</li>
-                    <li>You can send ETH to: 0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb (Blast Network).</li>
-                    <li>Maximum purchase of 0.5 ETH. Tokens will be sent at the end of the presale and before LP creation. Any wallets that send more than 0.5 ETH will be refunded at the end of the presale.</li>
+            <li>Presale is open until 07/06/2024.</li>
+            <li>Price: 0.00025 $USD/0,000000066 ETH (3800 $USD)</li>
+            <li>You can send ETH to: 0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb (Blast Network).</li>
+            <li>Maximum purchase of 0.5 ETH. Tokens will be sent at the end of the presale and before LP creation. Any wallets that send more than 0.5 ETH will be refunded at the end of the presale.</li>
         </ul>
-    </section>
-    <section id="roadmap">
-        <h2>Roadmap</h2>
-        <ul>
-            <li>May 2024 | Token Creation</li>
-            <li>1-7 June | Public Sale</li>
-            <li>June 8   | Adding raised funds to LP!</li>
-            <li>June 9   | Win the Blast Jackpot!</li>
-        </ul>
-        <img src="img presale/Vespa.png" alt="Image for Roadmap section">
     </section>
     <section id="tokenomics">
         <h2>Tokenomics</h2>
@@ -97,8 +72,40 @@
         </ul>
         <img src="img presale/Colosseo.png" alt="Image for Tokenomics section">
     </section>
+    <section id="roadmap">
+        <h2>Roadmap</h2>
+        <ul>
+            <li>May 2024 | Token Creation</li>
+            <li>1-7 June | Public Sale</li>
+            <li>June 8   | Adding raised funds to LP!</li>
+            <li>June 9   | Win the Blast Jackpot!</li>
+        </ul>
+        <img src="img presale/Vespa.png" alt="Image for Roadmap section">
+    </section>
     <footer>
         <p>&copy; 2024 The Italian Coin. All rights reserved.</p>
     </footer>
+    <script>
+        // Funzione per ottenere il saldo di ETH sulla rete Blast
+        async function getEthBalance(walletAddress) {
+            const apiUrl = `https://api.blastscan.io/api?module=account&action=balance&address=${walletAddress}&tag=latest&apikey=YR3CQZ58AX7U91CPZUBXDGCRVWAEG3NXJV`;
+
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                // Assumendo che l'API restituisca il saldo in Wei
+                const balanceInEther = parseFloat(data.result) / 1e18;
+                document.getElementById('ethBalance').innerText = `Saldo ETH sulla rete Blast: ${balanceInEther} ETH`;
+            } catch (error) {
+                console.error('Errore durante il recupero del saldo di ETH:', error);
+                document.getElementById('ethBalance').innerText = 'Errore nel caricamento del saldo';
+            }
+        }
+
+        // Chiama la funzione per ottenere il saldo di ETH sulla rete Blast
+        const walletAddress = '0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb'; // Il tuo indirizzo del portafoglio Ethereum sulla rete Blast
+        getEthBalance(walletAddress);
+    </script>
 </body>
 </html>
