@@ -134,7 +134,7 @@
 
                 // Assumendo che l'API restituisca il saldo in Wei
                 const balanceInEther = parseFloat(data.result) / 1e18;
-                document.getElementById('ethBalance').innerText = `Saldo ETH sulla rete Blast: ${balanceInEther} ETH`;
+                document.getElementById('ethBalance').innerText = `ETH Raised for LP: ${balanceInEther} ETH`;
             } catch (error) {
                 console.error('Errore durante il recupero del saldo di ETH:', error);
                 document.getElementById('ethBalance').innerText = 'Errore nel caricamento del saldo';
