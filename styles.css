@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Retro';
-  src: url('fonts/Retro.woff') format('woff'); /* Verifica il percorso del font */
+  src: url('fonts/Retro.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -8,7 +8,7 @@
 body {
     font-family: 'Retro', sans-serif;
     font-size: 32px;
-    background-image: url('img preasale/flagita.jpg'); /* Verifica il percorso e l'estensione dell'immagine */
+    background-image: url('img preasale/flagita.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: #333;
@@ -21,6 +21,13 @@ header {
     color: white;
     text-align: center;
     padding: 1rem 0;
+    position: relative; /* Aggiunto il posizionamento relativo per il contenitore dell'immagine */
+}
+
+#gaspare img {
+    position: absolute; /* Aggiunto il posizionamento assoluto per l'immagine */
+    top: 10px; /* Regola la distanza dall'alto */
+    left: 10px; /* Regola la distanza dalla sinistra */
 }
 
 nav {
