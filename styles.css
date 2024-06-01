@@ -71,6 +71,25 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
+about .content {
+    display: flex;
+    align-items: center;
+}
+
+#about .text {
+    width: 50%; /* Imposta la larghezza del testo al 50% */
+    padding: 0 20px; /* Aggiunge spazio intorno al testo */
+    box-sizing: border-box; /* Assicura che il padding non aumenti la larghezza del contenitore */
+}
+
+#about .image {
+    width: 50%; /* Imposta la larghezza dell'immagine al 50% */
+    text-align: center; /* Centra l'immagine all'interno del suo contenitore */
+}
+
+#about .image img {
+    max-width: 100%; /* Assicura che l'immagine non superi la larghezza del suo contenitore */
+}
 
 /* Media Queries for responsive design */
 @media (max-width: 768px) {
