@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +7,54 @@
     <meta name="description" content="Welcome to The Italian Coin - $TIC">
     <meta name="theme-color" content="#008C45">
     <title>Welcome to The Italian Coin - $TIC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: 'Press Start 2P', sans-serif;
-            font-size: 32px;
-            background-color: #008C45;
-            color: #FFFFFF;
-            margin: 0;
-            padding: 0;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 32px;
+    background-color: #008C45; /* Impostare il colore di sfondo desiderato */
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+        /* Aggiunta regola per il menu di navigazione mobile */
+        .mobile-nav-toggle {
+            display: none;
+        }
+        /* Regole per il menu di navigazione mobile */
+        @media (max-width: 768px) {
+            .mobile-nav-toggle {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 10px;
+                cursor: pointer;
+                z-index: 9999;
+            }
+            nav ul {
+                display: none;
+                background-color: #343a40;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                padding: 0.5rem;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            nav ul li a {
+                color: white;
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+                font-weight: bold;
+            }
         }
     </style>
 </head>
@@ -25,15 +64,38 @@
         <p>Symbol: $TIC</p>
         <p>Contract: 0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff</p>
     </header>
+    <!-- Aggiunta dell'icona del menu di navigazione mobile -->
+    <div class="mobile-nav-toggle">&#9776;</div>
     <nav>
         <ul>
-            <li><a href="#about"><img src="img presale/Menu.png" alt="About"></a></li>
-            <li><a href="#how-to-buy"><img src="img presale/Cash.png" alt="How to Buy"></a></li>
-            <li><a href="#roadmap"><img src="img presale/Vespa.png" alt="Roadmap"></a></li>
-            <li><a href="#tokenomics"><img src="img presale/Colosseo.png" alt="Tokenomics"></a></li>
-            <li><a href="https://x.com/TheItalianCoin" target="_blank"><img src="img presale/logotwitter.png" alt="Twitter"></a></li>
+            <li>
+                <a href="#about">
+                    <img src="img presale/Menu.png" alt="About">
+                </a>
+            </li>
+            <li>
+                <a href="#how-to-buy">
+                    <img src="img presale/Cash.png" alt="How to Buy">
+                </a>
+            </li>
+            <li>
+                <a href="#roadmap">
+                    <img src="img presale/Vespa.png" alt="Roadmap">
+                </a>
+            </li>
+            <li>
+                <a href="#tokenomics">
+                    <img src="img presale/Colosseo.png" alt="Tokenomics">
+                </a>
+            </li>
+            <li>
+                <a href="https://x.com/TheItalianCoin" target="_blank">
+                    <img src="img presale/logotwitter.png" alt="Twitter">
+                </a>
+            </li>
         </ul>
     </nav>
+    <!-- Rimossa l'etichetta section id="gaspare" -->
     <section id="about">
         <div class="about-content">
             <img src="img presale/clip.gif" alt="Image for Home section">
@@ -55,7 +117,9 @@
                 <p><span class="white-text">Price: 0.00025 $USD</span></p>
                 <p><span class="white-text">You can send ETH to:</span></p>
                 <p><span class="white-text">0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb</span></p>
-                <a href="#" onclick="copyToClipboard('0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb')"><img src="img presale/button.png" alt="Copia Indirizzo"></a>
+                <a href="#" onclick="copyToClipboard('0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb')">
+                    <img src="img presale/button.png" alt="Copia Indirizzo">
+                </a>
                 <p><span class="white-text">Maximum purchase of 0.5 ETH.</span></p>
                 <p><span class="white-text">Tokens will be sent at the end of the presale and before LP creation.</span></p>
                 <p><span class="white-text">Any wallets that send more than 0.5 ETH will be refunded at the end of the presale.</span></p>
@@ -65,22 +129,22 @@
     <section id="roadmap">
         <h2>Roadmap</h2>
         <ul>
-            <li>May 2024 | Token Creation ☑️</li>
-            <li>1-7 June | Public Sale ☑️</li>
-            <li>June 8   | Adding raised funds to LP!</li>
-            <li>June 9   | Win the Blast Jackpot!</li>
+            <p>May 2024 | Token Creation ☑️</p>
+            <p>1-7 June | Public Sale ☑️</p>
+            <p>June 8   | Adding raised funds to LP!</p>
+            <p>June 9   | Win the Blast Jackpot!</p>
         </ul>
         <img src="img presale/Vespa.png" alt="Image for Roadmap section">
     </section>
     <section id="tokenomics">
         <h2>Tokenomics</h2>
         <ul>
-            <li><span class="white-text">Total Supply: 1,000,000,000</span></li>
-            <li><span class="white-text">40% Presale</span></li>
-            <li><span class="white-text">30% Liquidity Pool</span></li>
-            <li><span class="white-text">20% Airdrop</span></li>
-            <li><span class="white-text">5% Marketing</span></li>
-            <li><span class="white-text">5% Team</span></li>
+            <p><span class="white-text">Total Supply: 1,000,000,000</span></p>
+            <p><span class="white-text">40% Presale</span></p>
+            <p><span class="white-text">30% Liquidity Pool</span></p>
+            <p><span class="white-text">20% Airdrop</span></p>
+            <p><span class="white-text">5% Marketing</span></p>
+            <p><span class="white-text">5% Team</span></p>
         </ul>
         <img src="img presale/Colosseo.png" alt="Image for Tokenomics section">
     </section>
@@ -88,6 +152,7 @@
         <p>&copy; 2024 The Italian Coin. All rights reserved.</p>
     </footer>
     <script>
+        // Funzione per copiare l'indirizzo nel clipboard
         function copyToClipboard(text) {
             const el = document.createElement('textarea');
             el.value = text;
@@ -97,6 +162,28 @@
             document.body.removeChild(el);
             alert('Indirizzo copiato negli appunti: ' + text);
         }
+
+        // Funzione per ottenere il saldo di ETH sulla rete Blast
+        async function getEthBalance(walletAddress) {
+            const apiUrl = `https://api.blastscan.io/api?module=account&action=balance&address=${walletAddress}&tag=latest&apikey=YR3CQZ58AX7U91CPZUBXDGCRVWAEG3NXJV`;
+
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                // Assumendo che l'API restituisca il saldo in Wei
+                const balanceInEther = parseFloat(data.result) / 1e18;
+                document.getElementById('ethBalance').innerText = `Saldo ETH sulla rete Blast: ${balanceInEther} ETH`;
+            } catch (error) {
+                console.error('Errore durante il recupero del saldo di ETH:', error);
+                document.getElementById('ethBalance').innerText = 'Errore nel caricamento del saldo';
+            }
+        }
+
+        // Chiama la funzione per ottenere il saldo di ETH sulla rete Blast
+        const walletAddress = '0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb'; // Il tuo indirizzo del portafoglio Ethereum sulla rete Blast
+        getEthBalance(walletAddress);
     </script>
 </body>
 </html>
+
