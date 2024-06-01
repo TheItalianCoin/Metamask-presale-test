@@ -21,7 +21,7 @@ header {
     position: absolute;
     top: 10px;
     left: 10px;
-    max-width: 100px; /* Aggiunta per assicurarsi che l'immagine non sia troppo grande su schermi piccoli */
+    
 }
 
 nav {
@@ -53,7 +53,7 @@ nav ul li a {
 nav ul li img {
     display: block;
     margin: 0 auto;
-    max-width: 50px; /* Aggiunto per controllare la dimensione dell'immagine */
+    
 }
 
 section {
