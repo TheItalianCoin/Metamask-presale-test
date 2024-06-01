@@ -1,8 +1,3 @@
-Ecco il codice HTML e CSS completo con la disposizione originale dell'immagine e del testo all'interno della sezione "About":
-
-HTML:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,45 +11,6 @@ HTML:
     <style>
         body {
             font-family: 'Press Start 2P', system-ui;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            list-style: none;
-            background-color: #f4f4f4;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a img {
-            width: 30px;
-            height: 30px;
-        }
-
-        section#about {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        section#about img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #f4f4f4;
         }
     </style>
 </head>
@@ -108,7 +64,7 @@ HTML:
         <ul>
             <img src="img presale/Cash.png" alt="Image for How to Buy section">       
             <li>Presale is open until 07/06/2024.</li>
-            <li>Price: 0.00025 $USD/0.000000066 ETH (3800 $USD)</li>
+            <li>Price: 0.00025 $USD/0,000000066 ETH (3800 $USD)</li>
             <li>You can send ETH to: 0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb (Blast Network).</li>
             <li>Maximum purchase of 0.5 ETH. Tokens will be sent at the end of the presale and before LP creation. Any wallets that send more than 0.5 ETH will be refunded at the end of the presale.</li>
         </ul>
@@ -141,4 +97,24 @@ HTML:
     <script>
         // Funzione per ottenere il saldo di ETH sulla rete Blast
         async function getEthBalance(walletAddress) {
-            const apiUrl = `https://api.blastscan.io/api?module=account&action=balance&address=${walletAddress}&tag=latest&apikey=YR3CQZ58AX7U91CPZUBXDGCRVWAEG3NXJV
+            const apiUrl = `https://api.blastscan.io/api?module=account&action=balance&address=${walletAddress}&tag=latest&apikey=YR3CQZ58AX7U91CPZUBXDGCRVWAEG3NXJV`;
+
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                // Assumendo che l'API restituisca il saldo in Wei
+                const balanceInEther = parseFloat(data.result) / 1e18;
+                document.getElementById('ethBalance').innerText = `Saldo ETH sulla rete Blast: ${balanceInEther} ETH`;
+            } catch (error) {
+                console.error('Errore durante il recupero del saldo di ETH:', error);
+                document.getElementById('ethBalance').innerText = 'Errore nel caricamento del saldo';
+            }
+        }
+
+        // Chiama la funzione per ottenere il saldo di ETH sulla rete Blast
+        const walletAddress = '0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb'; // Il tuo indirizzo del portafoglio Ethereum sulla rete Blast
+        getEthBalance(walletAddress);
+    </script>
+</body>
+</html>
