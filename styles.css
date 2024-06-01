@@ -4,7 +4,9 @@ font-face {
   font-weight: normal;
   font-style: normal;
 }
-
+body {
+  font-family: 'Retro', sans-serif;
+}
 body {
     font-family: 'Retro', sans-serif;
     font-size: 32px;
