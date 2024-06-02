@@ -115,4 +115,8 @@ footer {
     section {
         padding: 1rem;
     }
+
+    .icon-image {
+        width: 100%;
+    }
 }
