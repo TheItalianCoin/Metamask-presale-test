@@ -169,12 +169,13 @@
                 document.getElementById("countdown").innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
             }
 
-            update                       updateCountdown();
+            updateCountdown();
             const timerInterval = setInterval(updateCountdown, 1000);
         }
 
+        // Set the end date and time
         // Set the end date and time for the presale (in UTC)
-        const presaleEndTime = new Date("2024-08-06T19:00:00Z").getTime();
+        const presaleEndTime = new Date("2024-06-08T19:00:00Z").getTime();
         startCountdown(presaleEndTime);
     </script>
 </body>
