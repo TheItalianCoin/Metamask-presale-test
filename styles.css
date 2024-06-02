@@ -36,6 +36,10 @@ nav ul {
     flex-wrap: wrap; /* Aggiunto per consentire la flessibilità su schermi piccoli */
 }
 
+p {
+    word-wrap: break-word;
+}
+
 nav ul li {
     margin: 0.5rem;
     position: relative;
