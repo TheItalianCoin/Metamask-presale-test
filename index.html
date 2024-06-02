@@ -23,6 +23,10 @@
         section {
             text-align: center; /* To center align text within sections */
         }
+        #countdown {
+            font-size: 1.5em;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -72,10 +76,10 @@
     </section>
     <section id="how-to-buy">
         <h2>💸How to Buy💸</h2>
-            <p id="ethBalance">ETH Raised: Loading...</p> <!-- Placeholder for ETH balance -->
+        <p id="ethBalance">ETH Raised: Loading...</p> <!-- Placeholder for ETH balance -->
         <ul>
             <img src="img presale/Cash.png" alt="Image for How to Buy section" class="centered-image">       
-            <p><span class="white-text">Presale is open until 08/06/2024 19:00 UTC.</span></p>
+            <p><span class="white-text">Presale ends in: <span id="countdown"></span></span></p>
             <p><span class="white-text">Price: 0.00025 $USD</span></p>
             <p><span class="white-text">You can send ETH to:</span></p>
             <p><span class="white-text">0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb</span></p>
@@ -144,6 +148,35 @@
         // Chiama la funzione per ottenere il saldo di ETH sulla rete Blast
         const walletAddress = '0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb'; // Il tuo indirizzo del portafoglio Ethereum sulla rete Blast
         getEthBalance(walletAddress);
+
+        // Countdown Timer
+        function startCountdown(endTime) {
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+
+                if (distance < 0) {
+                    document.getElementById("countdown").innerText = "Presale ended";
+                    clearInterval(timerInterval);
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+
+            update                       updateCountdown();
+            const timerInterval = setInterval(updateCountdown, 1000);
+        }
+
+        // Set the end date and time for the presale (in UTC)
+        const presaleEndTime = new Date("2024-08-06T19:00:00Z").getTime();
+        startCountdown(presaleEndTime);
     </script>
 </body>
 </html>
+
