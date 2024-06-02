@@ -117,6 +117,9 @@ footer {
     }
 
     .icon-image {
+        width: 40%;
+    }
+    .icon-gif {
         width: 100%;
     }
 }
