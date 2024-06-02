@@ -197,7 +197,7 @@
             }).catch(console.error);
         }
 
-        // Chiama la funzione per ottenere il saldo di ETH sulla rete Blast
+        // Funzione per ottenere il saldo di ETH sulla rete Blast
         async function getEthBalance(walletAddress) {
             const apiUrl = `https://api.blastscan.io/api?module=account&action=balance&address=${walletAddress}&tag=latest&apikey=YR3CQZ58AX7U91CPZUBXDGCRVWAEG3NXJV`;
 
@@ -213,6 +213,10 @@
                 document.getElementById('ethBalance').innerText = 'Errore nel caricamento del saldo';
             }
         }
+
+        // Chiama la funzione per ottenere il saldo di ETH sulla rete Blast
+        const walletAddress = '0xd64F54F41B95c84D05919f7F4B4bF4598e43a3eb'; // Il tuo indirizzo del portafoglio Ethereum sulla rete Blast
+        getEthBalance(walletAddress);
 
         // Countdown Timer
         function startCountdown(endTime) {
