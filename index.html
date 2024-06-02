@@ -27,6 +27,17 @@
             font-size: 1.5em;
             color: white;
         }
+        /* Stile per il riquadro scrollabile */
+        .scrollable-box {
+            width: 80%;
+            height: 200px;
+            margin: 0 auto;
+            border: 1px solid white;
+            padding: 10px;
+            overflow-y: scroll;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
     </style>
 </head>
 <body>
@@ -113,6 +124,13 @@
         </ul>
         <img src="img presale/Colosseo.png" alt="Image for Tokenomics section" class="centered-image">
     </section>
+    <!-- Nuova sezione per la lista di indirizzi crypto -->
+    <section id="airdrop-list">
+        <h2>💧Airdrop Recipients💧</h2>
+        <div class="scrollable-box" id="addressList">
+            <!-- Gli indirizzi verranno caricati qui -->
+        </div>
+    </section>
     <footer>
         <p>&copy; 2024 The Italian Coin. All rights reserved.</p>
     </footer>
@@ -173,11 +191,28 @@
             const timerInterval = setInterval(updateCountdown, 1000);
         }
 
-        // Set the end date and time
         // Set the end date and time for the presale (in UTC)
         const presaleEndTime = new Date("2024-06-08T19:00:00Z").getTime();
         startCountdown(presaleEndTime);
+
+        // Funzione per caricare e visualizzare gli indirizzi dal file CSV
+        async function loadAddresses() {
+            const response = await fetch('airdrop_addresses.csv');
+            const csvText = await response.text();
+            const addresses = csvText.split('\n');
+
+            const addressListDiv = document.getElementById('addressList');
+            addresses.forEach(address => {
+                if (address.trim() !== '') {
+                    const p = document.createElement('p');
+                    p.textContent = address;
+                    addressListDiv.appendChild(p);
+                }
+            });
+        }
+
+        // Carica gli indirizzi al caricamento della pagina
+        loadAddresses();
     </script>
 </body>
 </html>
-
