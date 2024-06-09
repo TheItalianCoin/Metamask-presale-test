@@ -51,7 +51,9 @@
                 <img src="img presale/mmbutton.png" alt="Add Token to MetaMask" style="width: 20px; height: 20px; vertical-align: middle;">
     Add Token to MetaMask
 </button>
-
+<button onclick="copyAddress()">
+        Copy Address
+    </button>
         </section>
     </header>
     <nav>
@@ -149,6 +151,26 @@
         <p>&copy; 2024 The Italian Coin. All rights reserved.</p>
     </footer>
     <script>
+function copyAddress() {
+        var address = document.querySelector('.test').textContent.split(':')[1].trim();
+        
+        // Crea un elemento di input per copiare l'indirizzo
+        var input = document.createElement('input');
+        input.setAttribute('value', address);
+        document.body.appendChild(input);
+        
+        // Seleziona il testo nell'input
+        input.select();
+        
+        // Copia il testo selezionato
+        document.execCommand('copy');
+        
+        // Rimuovi l'elemento di input aggiunto
+        document.body.removeChild(input);
+        
+        // Mostra un messaggio o esegui altre azioni post-copia se necessario
+        alert('Address copied to clipboard: ' + address);
+ }
         // Funzione per copiare l'indirizzo nel clipboard
         function copyToClipboard(text) {
             const el = document.createElement('textarea');
