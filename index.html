@@ -131,10 +131,15 @@
     </section>
     <!-- Nuova sezione per la lista di indirizzi crypto -->
     <section id="airdrop-list">
-        <h2>🎁$TIC Airdropped Wallets🎁</h2>
-        <div class="scrollable-box" id="addressList">
-            <!-- Gli indirizzi verranno caricati qui -->
-        </div>
+        <h2>🎁Blast Projects Airdropped🎁</h2>
+        <ul>
+            <p><span class="black-text">Total Supply: 1,000,000,000 $TIC</span></p>
+            <p><span class="black-text">Game of Gold</span></p>
+            <p><span class="black-text">Pacmoon</span></p>
+            <p><span class="black-text">BIG</span></p>
+            <p><span class="green-text">SSS</span></p>
+            <p><span class="red-text">PAK Rekt</span></p>
+        </ul>
     </section>
     <footer>
         <p>&copy; 2024 The Italian Coin. All rights reserved.</p>
@@ -250,22 +255,6 @@
         // Set the end date and time for the presale (in UTC)
         const presaleEndTime = new Date("2024-06-09T20:00:00Z").getTime();
         startCountdown(presaleEndTime);
-
-        // Funzione per caricare e visualizzare gli indirizzi dal file CSV
-        async function loadAddresses() {
-            const response = await fetch('airdrop_addresses.csv');
-            const csvText = await response.text();
-            const addresses = csvText.split('\n');
-
-            const addressListDiv = document.getElementById('addressList');
-            addresses.forEach(address => {
-                if (address.trim() !== '') {
-                    const p = document.createElement('p');
-                    p.textContent = address;
-                    addressListDiv.appendChild(p);
-                }
-            });
-        }
 
         // Carica gli indirizzi al caricamento della pagina
         loadAddresses();
