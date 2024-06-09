@@ -59,6 +59,10 @@ Add Blast Network
 <img src="img presale/copytic.png" alt="Add Token to MetaMask" style="width: 20px; height: 20px; vertical-align: middle;">
         Copy Token CA Address
     </button>
+<button onclick="redirectToLink()">
+    <img src="img_presale/blastbutton.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
+    See on Blastscan
+</button>
     <script src="addblast.js"></script>
         </section>
     </header>
@@ -158,6 +162,10 @@ Add Blast Network
         <p>&copy; 2024 The Italian Coin. All rights reserved.</p>
     </footer>
     <script>
+function redirectToLink() {
+    window.open("https://blastscan.io/token/0x53bebf7995a81eb35c855f45c89962ed6a19d9ff#balances", "_blank");
+}
+
 function copyAddress() {
         var address = document.querySelector('.test').textContent.split(':')[1].trim();
         
