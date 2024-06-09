@@ -102,14 +102,17 @@ footer {
     header {
         padding: 0.5rem 0;
     }
-
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
     nav ul li {
         margin: 0.5rem 0;
+        width: 20%
+    }
+    nav ul li img{
+        width:90%
     }
 
     section {
