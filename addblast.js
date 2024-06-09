@@ -4,7 +4,7 @@ document.getElementById('add-network-btn').addEventListener('click', async () =>
             await window.ethereum.request({
                 method: 'wallet_addEthereumChain',
                 params: [{
-                    chainId: '0x13e91', // Chain ID in hexadecimal (81457 in decimal)
+                    chainId: '0x13e31', // Chain ID in hexadecimal (81457 in decimal)
                     chainName: 'Blast',
                     rpcUrls: ['https://rpc.blast.io'],
                     nativeCurrency: {
