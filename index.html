@@ -68,6 +68,10 @@ Add Blast Network
     <img src="img presale/thruster.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
     Trade on Thruster
 </button>
+<button onclick="redirectToLink3()">
+    <img src="img presale/thruster.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
+    See on DEXScreener
+</button>
     <script src="addblast.js"></script>
         </section>
     </header>
@@ -168,7 +172,9 @@ function redirectToLink() {
 function redirectToLink2() {
     window.open("https://app.thruster.finance/?token1=0x4300000000000000000000000000000000000004&token2=0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff", "_blank");
 }
-
+function redirectToLink3() {
+    window.open("https://dexscreener.com/blast/0x0094bb5a2ced055a7554e5d811b2b44aa2a8c962", "_blank");
+}
 function copyAddress() {
         var address = document.querySelector('.test').textContent.split(':')[1].trim();
         
