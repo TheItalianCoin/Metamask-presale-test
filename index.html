@@ -39,6 +39,40 @@
             color: white;
             background-color: rgba(0, 0, 0, 0.8);
         }
+.button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .button-with-text {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .button-with-text span {
+            font-size: 14px;
+            color: #ccc; /* Colore del testo del pulsante */
+        }
+        .button {
+            background-color: #4CAF50; /* Colore di sfondo del pulsante */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049; /* Colore di sfondo del pulsante al passaggio del mouse */
+        }
+        .button img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
