@@ -44,36 +44,72 @@
 <body>
     <header>
         <section id="gaspare">
-            <img src="img presale/TICbanner3.png" alt="Roadmap" class="centered-image">
-            <br>
-            <p>Symbol: $TIC</p>
-            <p class="test">Contract:0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff</p>
-<button id="add-network-btn">
-<img src="img presale/addblast.png" alt="Add Token to MetaMask" style="width: 20px; height: 20px; vertical-align: middle;">
-Add Blast Network
-</button>
+    <img src="img presale/TICbanner3.png" alt="Roadmap" class="centered-image">
+    <br>
+    <p>Symbol: $TIC</p>
+    <p class="test">Contract:0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff</p>
+
+    <div class="button-container">
+        <div class="button-with-text">
+            <span>Click me to add Blast Network</span>
+            <button id="add-network-btn">
+                <img src="img presale/addblast.png" alt="Add Token to MetaMask" style="width: 20px; height: 20px; vertical-align: middle;">
+                Add Blast Network
+            </button>
+        </div>
+
+        <div class="button-with-text">
+            <span>Click me to add TIC to MetaMask</span>
             <button onclick="addTokenToMetamask()">
                 <img src="img presale/mmbutton.png" alt="Add Token to MetaMask" style="width: 20px; height: 20px; vertical-align: middle;">
-    Add Token to MetaMask
-</button>
-<button onclick="copyAddress()">
-<img src="img presale/copytic.png" alt="Add Token to MetaMask" style="width: 20px; height: 20px; vertical-align: middle;">
+                Add Token to MetaMask
+            </button>
+        </div>
+
+        <div class="button-with-text">
+            <span>Click me to buy $TIC</span>
+            <button onclick="redirectToLink2()">
+                <img src="img presale/thruster.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
+                Trade on Thruster
+            </button>
+        </div>
+    </div>
+
+    <button onclick="copyAddress()">
+        <img src="img presale/copytic.png" alt="Add Token to MetaMask" style="width: 20px; height: 20px; vertical-align: middle;">
         Copy Token Contract
     </button>
-<button onclick="redirectToLink()">
-    <img src="img presale/addblast.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
-    See on Blastscan
-</button>
-<button onclick="redirectToLink2()">
-    <img src="img presale/thruster.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
-    Trade on Thruster
-</button>
-<button onclick="redirectToLink3()">
-    <img src="img presale/dex.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
-    See on DEXScreener
-</button>
+    <button onclick="redirectToLink()">
+        <img src="img presale/addblast.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
+        See on Blastscan
+    </button>
+    <button onclick="redirectToLink3()">
+        <img src="img presale/dex.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
+        See on DEXScreener
+    </button>
+
     <script src="addblast.js"></script>
-        </section>
+
+    <style>
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .button-with-text {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .button-with-text span {
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</section>
     </header>
     <nav>
         <ul>
