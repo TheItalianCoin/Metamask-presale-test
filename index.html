@@ -39,20 +39,39 @@
             color: white;
             background-color: rgba(0, 0, 0, 0.8);
         }
-        .buttons-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2mm; /* Spazio di 2mm tra i bottoni */
-            justify-items: center;
+.button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .button-with-text {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .button-with-text span {
+            font-size: 14px;
+            color: #ccc; /* Colore del testo del pulsante */
         }
         .button {
-            width: 405px;
-            height: 338px;
-            background-size: cover;
+            background-color: #4CAF50; /* Colore di sfondo del pulsante */
+            color: white;
+            padding: 10px 20px;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
-            margin: 0;
-            padding: 0;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049; /* Colore di sfondo del pulsante al passaggio del mouse */
+        }
+        .button img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -71,26 +90,62 @@
                 <img src="img presale/addblast.png" alt="Add Token to MetaMask" style="width: 20px; height: 20px; vertical-align: middle;">
                 Add Blast Network
             </button>
+        </div>
 
+        <div class="button-with-text">
+            <span>Click to add $TIC to MM</span>
+            <button onclick="addTokenToMetamask()">
+                <img src="img presale/mmbutton.png" alt="Add Token to MetaMask" style="width: 20px; height: 20px; vertical-align: middle;">
+                Add Token to MetaMask
+            </button>
+        </div>
+
+        <div class="button-with-text">
+            <span>Click to buy $TIC</span>
+            <button onclick="redirectToLink2()">
+                <img src="img presale/thruster.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
+                Trade on Thruster
+            </button>
+<br>
+        </div>
+    </div>
+<br>
+    <button onclick="copyAddress()">
+        <img src="img presale/copytic.png" alt="Add Token to MetaMask" style="width: 20px; height: 20px; vertical-align: middle;">
+        Copy Token Contract
+    </button>
+    <button onclick="redirectToLink()">
+        <img src="img presale/addblast.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
+        See on Blastscan
+    </button>
+    <button onclick="redirectToLink3()">
+        <img src="img presale/dex.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
+        See on DEXScreener
+    </button>
 
     <script src="addblast.js"></script>
 
-   
-</section>
-<section id="how-to-buy" class="how-to-buy">
-            <h2>How to Buy</h2>
-			<br>
-		<br>
+    <style>
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            margin-top: 10px;
+        }
 
-            <div class="buttons-grid">
-                <button class="button" id="add-network-btn" style="background-image: url('img/blastlogo.png');"></button>
-                <button class="button" id="bridge-to-blast" style="background-image: url('img/blastalogoNOBG.png');" onclick="window.location.href='https://blast.io/07BJ0';"></button>
-                <button class="button" id="add-token-to-metamask" style="background-image: url('img/metamasklogo.png');"></button>
-                <button class="button" id="trade-on-thruster" style="background-image: url('img/ThrusterLogo.png');" onclick="window.location.href='https://app.thruster.finance/?token1=0x4300000000000000000000000000000000000004&token2=0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff';"></button>
-                <button class="button" id="see-on-blastscan" style="background-image: url('img/blastscanlogo.png');" onclick="window.location.href='https://blastscan.io/token/0x53bebf7995a81eb35c855f45c89962ed6a19d9ff#balances';"></button>
-                <button class="button" id="see-on-dexscreener" style="background-image: url('img/dexlogo.png');" onclick="window.location.href='https://dexscreener.com/blast/0x0094bb5a2ced055a7554e5d811b2b44aa2a8c962';"></button>
-            </div>
-        </section>
+        .button-with-text {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .button-with-text span {
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</section>
     </header>
     <nav>
         <ul>
