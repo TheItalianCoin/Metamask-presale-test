@@ -1,0 +1,68 @@
+
+
+
+
+VOrrei 8 bottoni invece di 6, in questo ordine:
+
+1- Add Blast Network
+2- Bridge to Blast:     https://blast.io/07BJ0
+3- Add token to Metamask
+4- Trade on thruster:   https://app.thruster.finance/?token1=0x4300000000000000000000000000000000000004&token2=0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff
+5- See on Blastscan:    https://blastscan.io/token/0x53bebf7995a81eb35c855f45c89962ed6a19d9ff#balances
+6- See on Dexscreener:  https://dexscreener.com/blast/0x0094bb5a2ced055a7554e5d811b2b44aa2a8c962
+7- Visit Twitter:       https://x.com/TheItalianCoin
+8- Join DistrictOne:    https://districtone.io/invite/ITALY
+
+(eliminiamo il tasto per copiare il contratto del token)
+
+
+
+
+
+INFO
+
+$TIC 🤌 is a meme coin with no intrinsic value or expectation of financial return.
+The aim of the $TIC token is to win the Blast jackpot!
+
+Fair Launch
+Contract Ownership Renounced
+25% distributed via Airdrop to Blast Communities
+30% Liquidity Pool
+40% Burned(Sent to Dead Wallet)
+3% Future Airdrop 
+2% Team
+
+
+
+
+TOKENOMICS
+
+Total Supply: 1,000,000,000 $TIC
+
+40% Presale
+
+30% Liquidity Pool
+
+25% Airdrop
+
+3% Future Airdrop
+
+2% Team
+
+
+
+ROADMAP
+
+May 2024 | Token Creation ☑️
+
+1-9 June | Public Sale ☑️
+
+June 10 | Adding raised funds to LP ☑️
+
+TBC | Win the Blast Jackpot!🤌
+
+CONTACT
+
+theitaliancoin@gmail.com
+
+Address: Metaverse, WWW, 00110010
