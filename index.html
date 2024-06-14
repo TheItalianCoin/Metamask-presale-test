@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,145 +9,85 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="img presale/copytic.png">
     <style>
+        /* Stili CSS del sito 2 */
         body {
-            font-family: 'Press Start 2P', system-ui;
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 20px;
         }
-        .white-text {
-            color: white;
-        }
+
         .centered-image {
-            width: 100%;
+            display: block;
             margin-left: auto;
             margin-right: auto;
+            width: 50%;
+            max-width: 600px;
         }
-        section {
-            text-align: center; /* To center align text within sections */
+
+        .button-container {
+            margin-top: 20px;
         }
-        #countdown {
-            font-size: 1.5em;
-            color: white;
-        }
-        /* Stile per il riquadro scrollabile */
-        .scrollable-box {
-            width: 80%;
-            height: 200px;
-            margin: 0 auto;
-            border: 1px solid white;
-            padding: 10px;
-            overflow-y: scroll;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-.button-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-            margin-top: 10px;
-        }
-        .button-with-text {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .button-with-text span {
-            font-size: 14px;
-            color: #ccc; /* Colore del testo del pulsante */
-        }
+
         .button {
-            background-color: #4CAF50; /* Colore di sfondo del pulsante */
+            background-color: #4CAF50; /* Green */
+            border: none;
             color: white;
             padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
+
         .button:hover {
-            background-color: #45a049; /* Colore di sfondo del pulsante al passaggio del mouse */
+            background-color: #45a049;
         }
-        .button img {
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
-            margin-right: 5px;
+
+        .button-with-text {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <header>
-       <section id="gaspare">
-    <img src="img presale/TICbanner3.png" alt="Roadmap" class="centered-image">
-    <br>
-    <p>Symbol: $TIC</p>
-    <p class="test">Contract:0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff</p>
+        <section id="gaspare">
+            <img src="img presale/TICbanner3.png" alt="Roadmap" class="centered-image">
+            <br>
+            <p>Symbol: $TIC</p>
+            <p class="test">Contract: 0x53BEbF7995a81Eb35c855F45c89962ED6A19d9ff</p>
 
-    <div class="button-container">
-        <div class="button-with-text">
-            <span>Click to add Blast Network</span>
-            <button id="add-network-btn">
-                <img src="img presale/addblast.png" alt="Add Token to MetaMask" style="width: 20px; height: 20px; vertical-align: middle;">
-                Add Blast Network
-            </button>
-        </div>
+            <!-- Container per i bottoni -->
+            <div class="button-container">
+                <!-- Primo bottone -->
+                <div class="button-with-text">
+                    <span>Click to add Blast Network</span>
+                    <button class="button" id="add-blast-network" onclick="addBlastNetwork()">
+                        Add Blast Network
+                    </button>
+                </div>
 
-        <div class="button-with-text">
-            <span>Click to add $TIC to MM</span>
-            <button onclick="addTokenToMetamask()">
-                <img src="img presale/mmbutton.png" alt="Add Token to MetaMask" style="width: 20px; height: 20px; vertical-align: middle;">
-                Add Token to MetaMask
-            </button>
-        </div>
+                <!-- Secondo bottone -->
+                <div class="button-with-text">
+                    <span>Click to add token to MetaMask</span>
+                    <button class="button" id="add-token-to-metamask" onclick="addTokenToMetamask()">
+                        Add Token to MetaMask
+                    </button>
+                </div>
 
-        <div class="button-with-text">
-            <span>Click to buy $TIC</span>
-            <button onclick="redirectToLink2()">
-                <img src="img presale/thruster.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
-                Trade on Thruster
-            </button>
-<br>
-        </div>
-    </div>
-<br>
-    <button onclick="copyAddress()">
-        <img src="img presale/copytic.png" alt="Add Token to MetaMask" style="width: 20px; height: 20px; vertical-align: middle;">
-        Copy Token Contract
-    </button>
-    <button onclick="redirectToLink()">
-        <img src="img presale/addblast.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
-        See on Blastscan
-    </button>
-    <button onclick="redirectToLink3()">
-        <img src="img presale/dex.png" alt="Blast Button" style="width: 20px; height: 20px; vertical-align: middle;">
-        See on DEXScreener
-    </button>
+                <!-- Terzo bottone -->
+                <div class="button-with-text">
+                    <span>Trade on Thruster</span>
+                    <button class="button" id="trade-on-thruster" onclick="tradeOnThruster()">
+                        Trade on Thruster
+                    </button>
+                </div>
+            </div>
 
-    <script src="addblast.js"></script>
-
-    <style>
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        .button-with-text {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .button-with-text span {
-            font-size: 14px;
-            color: #333;
-        }
-    </style>
-</section>
+        </section>
     </header>
     <nav>
         <ul>
